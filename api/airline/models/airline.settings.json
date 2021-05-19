@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "airlines",
   "info": {
-    "name": "airline"
+    "name": "airline",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -18,9 +19,17 @@
     "description": {
       "type": "richtext"
     },
-    "categories": {
+    "users": {
       "via": "airlines",
-      "collection": "category"
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "fleet": {
+      "via": "airline",
+      "model": "fleets"
+    },
+    "aeroplanes": {
+      "collection": "aeroplane"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "easas",
+  "info": {
+    "name": "EASA"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "qualificationType": {
+      "type": "datetime"
+    },
+    "medicalValidationDate": {
+      "type": "datetime"
+    },
+    "englishTestExpiryDate": {
+      "type": "datetime"
+    },
+    "aeroplane": {
+      "model": "aeroplane",
+      "via": "easas"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "easas"
+    }
+  }
+}

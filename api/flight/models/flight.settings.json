@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "flights",
+  "info": {
+    "name": "Flight",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "date": {
+      "required": true,
+      "type": "date"
+    },
+    "aeroplane": {
+      "via": "flights",
+      "model": "aeroplane"
+    },
+    "flightNumber": {
+      "type": "string",
+      "unique": true
+    },
+    "users_permissions_users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "flights",
+      "dominant": true
+    },
+    "BlocOutDate": {
+      "type": "datetime"
+    },
+    "BlocInDate": {
+      "type": "datetime"
+    },
+    "aeroplane_events": {
+      "via": "flight",
+      "collection": "aeroplane-event"
+    }
+  }
+}

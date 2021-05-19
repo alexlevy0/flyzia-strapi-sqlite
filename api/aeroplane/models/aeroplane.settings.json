@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aeroplanes",
+  "info": {
+    "name": "aeroplane",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "registration": {
+      "type": "string",
+      "unique": true
+    },
+    "fleet": {
+      "model": "fleets",
+      "via": "aeroplanes"
+    },
+    "categories": {
+      "via": "aeroplanes",
+      "collection": "category"
+    },
+    "flights": {
+      "via": "aeroplane",
+      "collection": "flight"
+    },
+    "aeroplane_events": {
+      "via": "aeroplane",
+      "collection": "aeroplane-event"
+    },
+    "easas": {
+      "via": "aeroplane",
+      "collection": "easa"
+    },
+    "faas": {
+      "via": "aeroplanes",
+      "collection": "faa"
+    }
+  }
+}

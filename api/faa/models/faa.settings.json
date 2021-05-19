@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faas",
+  "info": {
+    "name": "FAA"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "qualificationType": {
+      "type": "datetime"
+    },
+    "englishTestExpiryDate": {
+      "type": "datetime"
+    },
+    "flightReviewDate": {
+      "type": "datetime"
+    },
+    "aeroplanes": {
+      "collection": "aeroplane",
+      "via": "faas",
+      "dominant": true
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "aeroplane": {
+      "model": "aeroplane"
+    }
+  }
+}

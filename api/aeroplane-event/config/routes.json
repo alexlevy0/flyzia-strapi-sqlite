@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/aeroplane-events",
+      "handler": "aeroplane-event.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/aeroplane-events/count",
+      "handler": "aeroplane-event.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/aeroplane-events/:id",
+      "handler": "aeroplane-event.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/aeroplane-events",
+      "handler": "aeroplane-event.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/aeroplane-events/:id",
+      "handler": "aeroplane-event.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/aeroplane-events/:id",
+      "handler": "aeroplane-event.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

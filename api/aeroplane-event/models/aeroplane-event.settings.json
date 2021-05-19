@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aeroplane_events",
+  "info": {
+    "name": "AeroplaneEvent",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "flight": {
+      "via": "aeroplane_events",
+      "model": "flight"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "aeroplane_events"
+    },
+    "aeroplane": {
+      "via": "aeroplane_events",
+      "model": "aeroplane"
+    }
+  }
+}

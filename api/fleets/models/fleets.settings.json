@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "fleets",
   "info": {
-    "name": "category",
+    "name": "fleet",
     "description": ""
   },
   "options": {
@@ -13,12 +13,17 @@
   "attributes": {
     "name": {
       "type": "string",
-      "unique": true
+      "required": false,
+      "unique": false,
+      "default": "My fleet"
+    },
+    "airline": {
+      "via": "fleet",
+      "model": "airline"
     },
     "aeroplanes": {
-      "via": "categories",
-      "collection": "aeroplane",
-      "dominant": true
+      "via": "fleet",
+      "collection": "aeroplane"
     }
   }
 }
